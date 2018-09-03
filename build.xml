@@ -56,8 +56,8 @@
     </target>
     <!-- 发送邮件 -->
 	  <target name="sendEmail"> 
-    <!--<mail mailhost="smtp.copyrightshow.cn" mailport="25" subject="Email_Tony_Test Report!" messagefile="E:\软件测试\auto_test\html\${ReportName}${time}.html" messagemimetype="text/html" tolist="${mail_to}" user="ports@copyrightshow.cn" password="Qwer1257"> -->
-	<mail mailhost="mail.smtp.qq.com/" mailport="465" subject="Email_Tony_Test Report!" messagefile="E:\软件测试\auto_test\html\${ReportName}${time}.html" messagemimetype="text/html" tolist="${mail_to}" user="422070370@qq.com" password="li19936112*">
+    <mail mailhost="smtp.copyrightshow.cn" mailport="25" subject="Email_Tony_Test Report!" messagefile="E:\软件测试\auto_test\html\${ReportName}${time}.html" messagemimetype="text/html" tolist="${mail_to}" user="ports@copyrightshow.cn" password="Qwer1257">
+	<!--<mail mailhost="mail.smtp.qq.com/" mailport="465" subject="Email_Tony_Test Report!" messagefile="E:\软件测试\auto_test\html\${ReportName}${time}.html" messagemimetype="text/html" tolist="${mail_to}" user="422070370@qq.com" password="li19936112*"> -->
 	<!-- smtp.copyrightshow.cn这个是我们公司的邮箱域名，25端口号，subject 是邮件标题，messagefile 是要发送的文件，messagemimetype 是文件类型 tolist是要发送的邮箱地址 ，user password是 公司服务器邮箱的账号密码-->
       <from address="ports@copyrightshow.cn"/>   
       <fileset dir="E:\软件测试\auto_test\html">   <!--  加上这个fileset 这个标签属性，是指定的目录，下面的include 可以通配里面的文件，加上这个后就会把这个文件夹里面的所有报告都以附件的形式发送给我的邮箱了  -->
