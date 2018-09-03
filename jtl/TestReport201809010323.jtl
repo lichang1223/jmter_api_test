@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testResults version="1.2">
+<httpSample t="481" it="0" lt="480" ct="166" ts="1535786604008" s="true" lb="341 /user/api.go?device_type=1&amp;net_env=1&amp;desc=nCq38mwsy7OL2BzjkD4kvwW%2Bi%2FPN8mzu%2FME6L5kJ6zzW4%2F59DCk0BkZeYikipG%2FjxtiNTvEv6UbP%0Afyi2kduj3%2BKW1PQsCw%2Fupzbelcu98HU%3D%0A&amp;deviceTypeOrig=1&amp;timestamp=1534671707426&amp;longtitude=116.35953&amp;vc=&amp;platformSource=hiapp_android&amp;app_version=3.1.4&amp;device_id=5a7dad8a07ccb39a8966d8d6f68a4dc9&amp;imei=&amp;brand=honor&amp;latitude=40.073702&amp;app_type=3&amp;channel=70004&amp;model=FRD-AL10&amp;sign=43baeb47041605a898e1f9d9524d3150" rc="200" rm="" tn="线程组 1-1" dt="text" de="UTF-8" by="859" sby="801" sc="1" ec="0" ng="1" na="1" hn="It-chanG">
+  <responseHeader class="java.lang.String">HTTP/1.1 200 
+Server: Tengine/2.1.2
+Date: Sat, 01 Sep 2018 07:22:42 GMT
+Content-Type: application/json;charset=UTF-8
+Content-Length: 666
+Connection: keep-alive
+Cache-Control: no-cache
+</responseHeader>
+  <requestHeader class="java.lang.String">Connection: keep-alive
+Content-Type: application/x-www-form-urlencoded
+Accept-Encoding: gzip, deflate
+User-Agent: okhttp/3.10.0
+Content-Length: 166
+Host: m.hitrips.com
+</requestHeader>
+  <responseData class="java.lang.String">{&quot;data&quot;:{&quot;bannerImgUrl&quot;:&quot;&quot;,&quot;bannerLink&quot;:&quot;https://h5.easytravel.com.cn/useCar/index.html?partnerCode=haitu&amp;hiToken=764ffa38e23146c098c6a47c5e1ab678&quot;,&quot;isMerge&quot;:1,&quot;isSubscribe&quot;:true,&quot;userBaseInfo&quot;:{&quot;bindThirdPartyTypes&quot;:[],&quot;birthday&quot;:&quot;1534670736788&quot;,&quot;createTime&quot;:1534670720000,&quot;creditsAvailable&quot;:0,&quot;employeeStatus&quot;:2,&quot;gender&quot;:&quot;0&quot;,&quot;grade&quot;:0,&quot;hasRelative&quot;:false,&quot;isMember&quot;:0,&quot;isNewUser&quot;:0,&quot;memberLevel&quot;:&quot;普通会员&quot;,&quot;memberLevelCode&quot;:&quot;0&quot;,&quot;mobile&quot;:&quot;18623321103&quot;,&quot;phoneNumber&quot;:&quot;186****1103&quot;,&quot;place&quot;:&quot;北京 东城区&quot;,&quot;region&quot;:&quot;86&quot;,&quot;token&quot;:&quot;764ffa38e23146c098c6a47c5e1ab678&quot;,&quot;userId&quot;:140085442,&quot;userName&quot;:&quot;Hi客140085442&quot;}},&quot;status&quot;:{&quot;code&quot;:0},&quot;systemDate&quot;:1535786562621}</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">action=loginWithPassword&amp;phoneNumber=18623321103&amp;passWord=12345678&amp;uuid=5a7dad8a07ccb39a8966d8d6f68a4dc9&amp;captcha=&amp;captcha_type=&amp;region=86&amp;distinct_id=b71c7818ac09b69f</queryString>
+  <java.net.URL>http://m.hitrips.com/user/api.go?device_type=1&amp;net_env=1&amp;desc=nCq38mwsy7OL2BzjkD4kvwW%2Bi%2FPN8mzu%2FME6L5kJ6zzW4%2F59DCk0BkZeYikipG%2FjxtiNTvEv6UbP%0Afyi2kduj3%2BKW1PQsCw%2Fupzbelcu98HU%3D%0A&amp;deviceTypeOrig=1&amp;timestamp=1534671707426&amp;longtitude=116.35953&amp;vc=&amp;platformSource=hiapp_android&amp;app_version=3.1.4&amp;device_id=5a7dad8a07ccb39a8966d8d6f68a4dc9&amp;imei=&amp;brand=honor&amp;latitude=40.073702&amp;app_type=3&amp;channel=70004&amp;model=FRD-AL10&amp;sign=43baeb47041605a898e1f9d9524d3150</java.net.URL>
+</httpSample>
+
+
+<httpSample t="242" it="0" lt="240" ct="136" ts="1535786610678" s="true" lb="选择" rc="200" rm="OK" tn="Thread Group 1-1" dt="text" de="utf-8" by="430" sby="1146" sc="1" ec="0" ng="1" na="1" hn="It-chanG">
+  <responseHeader class="java.lang.String">HTTP/1.1 200 OK
+Server: nginx
+Date: Sat, 01 Sep 2018 07:22:48 GMT
+Content-Type: application/json; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: PHP/5.5.31
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+Pragma: no-cache
+</responseHeader>
+  <requestHeader class="java.lang.String">Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+Connection: keep-alive
+Content-Type: application/x-www-form-urlencoded
+Origin: http://m.vipwifi.com
+Referer: http://m.vipwifi.com/product/shopDetail/id/24
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.75 Safari/537.36
+X-Requested-With: XMLHttpRequest
+Content-Length: 13
+Host: m.vipwifi.com
+</requestHeader>
+  <responseData class="java.lang.String">{&quot;status&quot;:1,&quot;data&quot;:{&quot;rs&quot;:0,&quot;msg&quot;:&quot;\u8bf7\u767b\u5f55&quot;},&quot;referer&quot;:&quot;&quot;,&quot;state&quot;:&quot;success&quot;}</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <cookies class="java.lang.String">PHPSESSID=h0hmvjdsajf4uavpangnnc8hb5; Hm_lvt_0d44252d1019bb007d237d48e9808694=1534068409; zg_did=%7B%22did%22%3A%20%221652d9a421669-0b5f64288d5568-3a455360-100200-1652d9a42171dc%22%7D; zg_7d14e9886d8e41fa8fa288518dbea66e=%7B%22sid%22%3A%201534068408862%2C%22updated%22%3A%201534070522630%2C%22info%22%3A%201534068408899%2C%22superProperty%22%3A%20%22%7B%7D%22%2C%22platform%22%3A%20%22%7B%7D%22%2C%22utm%22%3A%20%22%7B%7D%22%2C%22referrerDomain%22%3A%20%22%22%2C%22landHref%22%3A%20%22http%3A%2F%2Fm.vipwifi.com%2Fuser%2Flogin%22%2C%22cuid%22%3A%20%22P1340858%22%7D; Hm_lpvt_0d44252d1019bb007d237d48e9808694=1534070523</cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">product_id=24</queryString>
+  <java.net.URL>http://m.vipwifi.com/product/addShopCart/t/1534070526000</java.net.URL>
+</httpSample>
+<httpSample t="0" it="0" lt="0" ct="0" ts="0" s="false" lb="" rc="Non HTTP response code: java.net.MalformedURLException" rm="Non HTTP response message: unknown protocol: https1" tn="Thread Group 1-1" dt="text" de="" by="705" sby="0" sc="1" ec="1" ng="1" na="1" hn="It-chanG">
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">java.net.MalformedURLException: unknown protocol: https1&#xd;
+	at java.net.URL.&lt;init&gt;(URL.java:421)&#xd;
+	at java.net.URL.&lt;init&gt;(URL.java:310)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.getUrl(HTTPSamplerBase.java:1008)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1189)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1178)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.executeSamplePackage(JMeterThread.java:490)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:416)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:250)&#xd;
+	at java.lang.Thread.run(Thread.java:748)&#xd;
+</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <cookies class="java.lang.String"></cookies>
+  <queryString class="java.lang.String"></queryString>
+  <null/>
+</httpSample>
+<httpSample t="0" it="0" lt="0" ct="0" ts="0" s="false" lb="" rc="Non HTTP response code: java.net.MalformedURLException" rm="Non HTTP response message: unknown protocol: http1" tn="Thread Group 1-1" dt="text" de="" by="743" sby="0" sc="1" ec="1" ng="1" na="1" hn="It-chanG">
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">java.net.MalformedURLException: unknown protocol: http1&#xd;
+	at java.net.URL.&lt;init&gt;(URL.java:421)&#xd;
+	at java.net.URL.&lt;init&gt;(URL.java:310)&#xd;
+	at java.net.URL.&lt;init&gt;(URL.java:333)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.getUrl(HTTPSamplerBase.java:1006)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1189)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1178)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.executeSamplePackage(JMeterThread.java:490)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:416)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:250)&#xd;
+	at java.lang.Thread.run(Thread.java:748)&#xd;
+</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <cookies class="java.lang.String"></cookies>
+  <queryString class="java.lang.String"></queryString>
+  <null/>
+</httpSample>
+
+</testResults>

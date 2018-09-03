@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en"><head><META http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="shanhe.me" name="Author"><title>JMeter Test Results</title><style type="text/css">
+            
+                * { margin: 0; padding: 0 }
+                html, body { width: 100%; height: 100%; background: #b4b4b4; font-size: 12px }
+                table { border: none; border-collapse: collapse; table-layout: fixed }
+                td { vertical-align: baseline; font-size: 12px }
+                #left-panel { position: absolute; left: 0; top: 0; bottom: 0; width: 300px; overflow: auto; background: #dee4ea }
+                #left-panel li.navigation { font-weight: bold; cursor: default; color: #9da8b2; line-height: 18px; background-position: 12px 5px; background-repeat: no-repeat; padding: 0 0 0 25px; background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAICAYAAAArzdW1AAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9sDEBQqGbO7BEcAAAAdaVRYdENvbW1lbnQAAAAAAENyZWF0ZWQgd2l0aCBHSU1QZC5lBwAAAKRJREFUGNN1zM0KgkAYheF3RvtXSsGyWhRNaILS7bdt11W0KgJvoPwZp0UlBPUtz3nOJw7Hk7necv5dOA2Qaazo2vZP0LEt9olCVtqQROufKNmuqBuBNAYW4QzXGX6B0bDPcjGnMQYJ8Cg12U59oSzaUJQa4IUAXMclDHwAAn/MxPMw765FZd2QRgopBWmsKCrdfhXnS/4ZYElBXdyxewN008Y8AephLAkqz613AAAAAElFTkSuQmCC) }
+                #left-panel li.success { color: #565b60 }
+                #left-panel li.failure { color: red }
+                #left-panel li { list-style: none; color: black; cursor: pointer }
+                #left-panel li.selected { background-repeat: repeat-x; color: white; background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAUCAYAAABMDlehAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9sDEBQxLTs5O2gAAAAdaVRYdENvbW1lbnQAAAAAAENyZWF0ZWQgd2l0aCBHSU1QZC5lBwAAAEdJREFUCNc1y7ERgEAMA0GNUhIyGqM2uqKgtyWZhE9v53A/7/A6D7BkMDNgy2AroB2wHTCZv5UMOgFLG1bvd7XBckBlwCXjA5wMOF5iOX/MAAAAAElFTkSuQmCC) }
+                #left-panel div { line-height: 20px; background-position: 25px 3px; background-repeat: no-repeat; padding: 0 0 0 45px }
+                #left-panel div.success { background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAOCAYAAADwikbvAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9sDEBULEEc6wzcAAAAdaVRYdENvbW1lbnQAAAAAAENyZWF0ZWQgd2l0aCBHSU1QZC5lBwAAAiNJREFUKM99kktIVGEYhp/jzJl08lI6logp2Y2EFkbtaqlFROsWrlq4ioJWQRs37VoUVItWkYEVRGSBlhleCpywDEWxTEuxcURTZ6YzxzP/5WshCOHUt36f93kXnyMi5Lsnb4clI4s4fhkXzp5w8mWcfHBvfEpUxVdCUUU6lUPNHuD86cYtBQX5GhPrM7hRg7GaSDRg2vuUd90WuOPVsOyqy6FFo2yOQHlU1S9z9dZT+S/8I7GCLlkAN4eyAf56mnT6Fy1HLnGuuYa++MS/4e74qMRqfXLaJ9BpfnsrLC0m2BYuoqwUbj/+274JD43OEqmexwvW8NUKXnaZtVSS1pNtAAyOvyC6v48HnUNb4Z7PH8UtTlIQWA5tb2RhYY7kz3l2FleytJYg/qWb8t2KZ/0PN+1hgI6uEUr2jpHKpGlquExVaS0VbjUZL7WxaqIXK6ADQ0n9GNfv9XCttWnD/O57t0TKFklnF3g5fJ/seoaa2D4O1x0F4PlgO9oIftbgFgYMfLgjACGqj0vlsddoUnj+Kt/mxunq72RP+UGqYjWMTA7R+b6dUCSEGEF5hoJQip6BaFs4HJtCyRrKs6wHCovDip/kys0WWpovMpOYBCtoT2N9B5uzWG0Zid8gnFrVFEQDtBaUrxEgXBimaEeER2/uIiK4roPOaMRYjBKsFly3fOO3G06dETGCWIsYjckprMphtEKMAQtgsMYi1mJMQHJ6xvkDKQoyphCzkl0AAAAASUVORK5CYII=) }
+                #left-panel div.failure { background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAOCAYAAADwikbvAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9sDEBUJOEC5CU8AAAAdaVRYdENvbW1lbnQAAAAAAENyZWF0ZWQgd2l0aCBHSU1QZC5lBwAAAeVJREFUKM+NkDtok2EUhp8vl9ZLo/EyKI6KFgqCKC4OClrBWUQEcRRx1cGpk3WyInWrgoMZKkW8thYaEYQ0i7WC2ngrNDTERHJvkv/L/3//dxwc7F8jeOAsh/c973OOEhG61aPnaen7maXYt4MLZ4+pbppQt+F06jNH3QWOb8pxUs+SmJzjv83hxY8SVy3wNdtVneiHqe54IhLoB4/TUkyMyOrKj5yXoVtPZK02kLyYK7OnlqFWzgcCGtUC/YUJ3n5a/jd28tU7ORTN0myUA6Jms8bpWIa798elqzn1fokjThrpVBC3ETzNbYAuca59j/Hp+b/N869Tsk8tgVMCXQk+RlfQuk1/tMLMwzsSMCcm5zjhvoR2AdpF0GuwO4aqttS05ZSbZHhsBoAIwI83Cdkd/460XDAOG02d24MxvlR8dsUUh3f2UHaEtgdbWCHz4oZwcVCp66PP5FLhKjEc8DXaCMsNy8DYn/SnZ+L0hhWOb/F8yLs9fDtwk8j+VpqwrlC34PrgGEu2bhlYhZ1b8dncq3AMeBaUr/k6NUyk4ChKzu+N2hc6Bqody+WDG8g2fLatD7F3axjPgmvAtYJvIbouhhIRrl0ZktnkBGIt1gqeMXQ8D2MMiCIUCqFEsFhEQMSykCuqX0MzLAUJTzRsAAAAAElFTkSuQmCC) }
+                #left-panel div.detail { display: none }
+                #right-panel { position: absolute; right: 0; top: 0; bottom: 0; left: 301px; overflow: auto; background: white }
+                #right-panel .group { font-size: 12px; font-weight: bold; line-height: 16px; padding: 0 0 0 18px; counter-reset: assertion; background-repeat: repeat-x; background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAQCAYAAADXnxW3AAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9sDEBUkDq8pxjkAAAAdaVRYdENvbW1lbnQAAAAAAENyZWF0ZWQgd2l0aCBHSU1QZC5lBwAAADdJREFUCNdVxrERwDAMAzGK0v47eS6Z927SpMFBAAbkvSvnRk5+7K5cVfLMyN39bWakJAjA5xw9R94jN3tVhVEAAAAASUVORK5CYII=) }
+                #right-panel .zebra { background-repeat: repeat; padding: 0 0 0 18px; background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAmCAYAAAAFvPEHAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9sDEBYWFlNztEcAAAAdaVRYdENvbW1lbnQAAAAAAENyZWF0ZWQgd2l0aCBHSU1QZC5lBwAAABdJREFUCNdjYKAtePv5338mBgYGBpoQAGy1BAJlb/y6AAAAAElFTkSuQmCC) }
+                #right-panel .data { line-height: 19px; white-space: nowrap }
+                #right-panel pre.data { white-space: pre }
+                #right-panel tbody.failure { color: red }
+                #right-panel td.key { min-width: 108px }
+                #right-panel td.delimiter { min-width: 18px }
+                #right-panel td.assertion:before { counter-increment: assertion; content: counter(assertion) ". " }
+                #right-panel td.assertion { color: black }
+                #right-panel .trail { border-top: 1px solid #b4b4b4 }
+                
+            </style><script type="text/javascript">
+            
+                var onclick_li = (function() {
+                    var last_selected = null;
+                    return function(li) {
+                        if( last_selected == li )
+                            return;
+                        if( last_selected )
+                            last_selected.className = "";
+                        last_selected = li;
+                        last_selected.className = "selected";
+                        document.getElementById("right-panel").innerHTML = last_selected.firstChild.nextSibling.innerHTML;
+                        return false;
+                    };
+                })();
+                
+                var patch_timestamp = function() {
+                    var spans = document.getElementsByTagName("span");
+                    var len = spans.length;
+                    for( var i = 0; i < len; ++i ) {
+                        var span = spans[i];
+                        if( "patch_timestamp" == span.className )
+                            span.innerHTML = new Date( parseInt( span.innerHTML ) );
+                    }
+                };
+                
+                var patch_navigation_class = (function() {
+                
+                    var set_class = function(el, flag) {
+                        if(el) {
+                            el.className += flag ? " success" : " failure";
+                        }
+                    };
+                
+                    var traverse = function(el, group_el, flag) {
+                        while(1) {
+                            if(el) {
+                                if(el.className == 'navigation') {
+                                    set_class(group_el, flag);
+                                    group_el = el;
+                                    flag = true;
+                                } else {
+                                    var o = el.firstChild;
+                                    o = o ? o.className : null;
+                                    flag = flag ? (o == 'success') : false;
+                                }
+                                el = el.nextSibling;
+                            } else {
+                                set_class(group_el, flag);
+                                break;
+                            }
+                        }
+                    };
+                    
+                    return function() {
+                        var o = document.getElementById("result-list");
+                        o = o ? o.firstChild : null;
+                        if(o)
+                            traverse(o, null, true);
+                    };
+                })();
+        
+                window.onload = function() {
+                    patch_timestamp();
+                    patch_navigation_class();
+                    var o = document.getElementById("result-list");
+                    o = o ? o.firstChild : null;
+                    o = o ? o.nextSibling : null;
+                    if(o)
+                        onclick_li(o);
+                };
+        
+            </script></head><body><div id="left-panel"><ol id="result-list"><li class="navigation">Thread: 线程组 1-1</li><li onclick="return onclick_li(this);"><div class="success">341 /user/api.go?device_type=1&amp;net_env=1&amp;desc=nCq38mwsy7OL2BzjkD4kvwW%2Bi%2FPN8mzu%2FME6L5kJ6zzW4%2F59DCk0BkZeYikipG%2FjxtiNTvEv6UbP%0Afyi2kduj3%2BKW1PQsCw%2Fupzbelcu98HU%3D%0A&amp;deviceTypeOrig=1&amp;timestamp=1534671707426&amp;longtitude=116.35953&amp;vc=&amp;platformSource=hiapp_android&amp;app_version=3.1.4&amp;device_id=5a7dad8a07ccb39a8966d8d6f68a4dc9&amp;imei=&amp;brand=honor&amp;latitude=40.073702&amp;app_type=3&amp;channel=70004&amp;model=FRD-AL10&amp;sign=43baeb47041605a898e1f9d9524d3150</div><div class="detail"><div class="group">Sampler</div><div class="zebra"><table><tr><td class="data key">Thread Name</td><td class="data delimiter">:</td><td class="data">线程组 1-1</td></tr><tr><td class="data key">Timestamp</td><td class="data delimiter">:</td><td class="data"><span class="patch_timestamp">1535786604008</span></td></tr><tr><td class="data key">Time</td><td class="data delimiter">:</td><td class="data">481 ms</td></tr><tr><td class="data key">Latency</td><td class="data delimiter">:</td><td class="data">480 ms</td></tr><tr><td class="data key">Bytes</td><td class="data delimiter">:</td><td class="data">859</td></tr><tr><td class="data key">Sample Count</td><td class="data delimiter">:</td><td class="data">1</td></tr><tr><td class="data key">Error Count</td><td class="data delimiter">:</td><td class="data">0</td></tr><tr><td class="data key">Response Code</td><td class="data delimiter">:</td><td class="data">200</td></tr><tr><td class="data key">Response Message</td><td class="data delimiter">:</td><td class="data"></td></tr></table></div><div class="trail"></div><div class="group">Request</div><div class="zebra"><table><tr><td class="data key">Method/Url</td><td class="data delimiter">:</td><td class="data"><pre class="data">POST http://m.hitrips.com/user/api.go?device_type=1&amp;net_env=1&amp;desc=nCq38mwsy7OL2BzjkD4kvwW%2Bi%2FPN8mzu%2FME6L5kJ6zzW4%2F59DCk0BkZeYikipG%2FjxtiNTvEv6UbP%0Afyi2kduj3%2BKW1PQsCw%2Fupzbelcu98HU%3D%0A&amp;deviceTypeOrig=1&amp;timestamp=1534671707426&amp;longtitude=116.35953&amp;vc=&amp;platformSource=hiapp_android&amp;app_version=3.1.4&amp;device_id=5a7dad8a07ccb39a8966d8d6f68a4dc9&amp;imei=&amp;brand=honor&amp;latitude=40.073702&amp;app_type=3&amp;channel=70004&amp;model=FRD-AL10&amp;sign=43baeb47041605a898e1f9d9524d3150</pre></td></tr><tr><td class="data key">Query String</td><td class="data delimiter">:</td><td class="data"><pre class="data">action=loginWithPassword&amp;phoneNumber=18623321103&amp;passWord=12345678&amp;uuid=5a7dad8a07ccb39a8966d8d6f68a4dc9&amp;captcha=&amp;captcha_type=&amp;region=86&amp;distinct_id=b71c7818ac09b69f</pre></td></tr><tr><td class="data key">Cookies</td><td class="data delimiter">:</td><td class="data"><pre class="data"></pre></td></tr><tr><td class="data key">Request Headers</td><td class="data delimiter">:</td><td class="data"><pre class="data">Connection: keep-alive
+Content-Type: application/x-www-form-urlencoded
+Accept-Encoding: gzip, deflate
+User-Agent: okhttp/3.10.0
+Content-Length: 166
+Host: m.hitrips.com
+</pre></td></tr></table></div><div class="trail"></div><div class="group">Response</div><div class="zebra"><table><tr><td class="data key">Response Headers</td><td class="data delimiter">:</td><td class="data"><pre class="data">HTTP/1.1 200 
+Server: Tengine/2.1.2
+Date: Sat, 01 Sep 2018 07:22:42 GMT
+Content-Type: application/json;charset=UTF-8
+Content-Length: 666
+Connection: keep-alive
+Cache-Control: no-cache
+</pre></td></tr><tr><td class="data key">Response Data</td><td class="data delimiter">:</td><td class="data"><pre class="data">{"data":{"bannerImgUrl":"","bannerLink":"https://h5.easytravel.com.cn/useCar/index.html?partnerCode=haitu&amp;hiToken=764ffa38e23146c098c6a47c5e1ab678","isMerge":1,"isSubscribe":true,"userBaseInfo":{"bindThirdPartyTypes":[],"birthday":"1534670736788","createTime":1534670720000,"creditsAvailable":0,"employeeStatus":2,"gender":"0","grade":0,"hasRelative":false,"isMember":0,"isNewUser":0,"memberLevel":"普通会员","memberLevelCode":"0","mobile":"18623321103","phoneNumber":"186****1103","place":"北京 东城区","region":"86","token":"764ffa38e23146c098c6a47c5e1ab678","userId":140085442,"userName":"Hi客140085442"}},"status":{"code":0},"systemDate":1535786562621}</pre></td></tr><tr><td class="data key">Response File</td><td class="data delimiter">:</td><td class="data"><pre class="data"></pre></td></tr></table></div><div class="trail"></div></div></li><li class="navigation">Thread: Thread Group 1-1</li><li onclick="return onclick_li(this);"><div class="success">选择</div><div class="detail"><div class="group">Sampler</div><div class="zebra"><table><tr><td class="data key">Thread Name</td><td class="data delimiter">:</td><td class="data">Thread Group 1-1</td></tr><tr><td class="data key">Timestamp</td><td class="data delimiter">:</td><td class="data"><span class="patch_timestamp">1535786610678</span></td></tr><tr><td class="data key">Time</td><td class="data delimiter">:</td><td class="data">242 ms</td></tr><tr><td class="data key">Latency</td><td class="data delimiter">:</td><td class="data">240 ms</td></tr><tr><td class="data key">Bytes</td><td class="data delimiter">:</td><td class="data">430</td></tr><tr><td class="data key">Sample Count</td><td class="data delimiter">:</td><td class="data">1</td></tr><tr><td class="data key">Error Count</td><td class="data delimiter">:</td><td class="data">0</td></tr><tr><td class="data key">Response Code</td><td class="data delimiter">:</td><td class="data">200</td></tr><tr><td class="data key">Response Message</td><td class="data delimiter">:</td><td class="data">OK</td></tr></table></div><div class="trail"></div><div class="group">Request</div><div class="zebra"><table><tr><td class="data key">Method/Url</td><td class="data delimiter">:</td><td class="data"><pre class="data">POST http://m.vipwifi.com/product/addShopCart/t/1534070526000</pre></td></tr><tr><td class="data key">Query String</td><td class="data delimiter">:</td><td class="data"><pre class="data">product_id=24</pre></td></tr><tr><td class="data key">Cookies</td><td class="data delimiter">:</td><td class="data"><pre class="data">PHPSESSID=h0hmvjdsajf4uavpangnnc8hb5; Hm_lvt_0d44252d1019bb007d237d48e9808694=1534068409; zg_did=%7B%22did%22%3A%20%221652d9a421669-0b5f64288d5568-3a455360-100200-1652d9a42171dc%22%7D; zg_7d14e9886d8e41fa8fa288518dbea66e=%7B%22sid%22%3A%201534068408862%2C%22updated%22%3A%201534070522630%2C%22info%22%3A%201534068408899%2C%22superProperty%22%3A%20%22%7B%7D%22%2C%22platform%22%3A%20%22%7B%7D%22%2C%22utm%22%3A%20%22%7B%7D%22%2C%22referrerDomain%22%3A%20%22%22%2C%22landHref%22%3A%20%22http%3A%2F%2Fm.vipwifi.com%2Fuser%2Flogin%22%2C%22cuid%22%3A%20%22P1340858%22%7D; Hm_lpvt_0d44252d1019bb007d237d48e9808694=1534070523</pre></td></tr><tr><td class="data key">Request Headers</td><td class="data delimiter">:</td><td class="data"><pre class="data">Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+Connection: keep-alive
+Content-Type: application/x-www-form-urlencoded
+Origin: http://m.vipwifi.com
+Referer: http://m.vipwifi.com/product/shopDetail/id/24
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.75 Safari/537.36
+X-Requested-With: XMLHttpRequest
+Content-Length: 13
+Host: m.vipwifi.com
+</pre></td></tr></table></div><div class="trail"></div><div class="group">Response</div><div class="zebra"><table><tr><td class="data key">Response Headers</td><td class="data delimiter">:</td><td class="data"><pre class="data">HTTP/1.1 200 OK
+Server: nginx
+Date: Sat, 01 Sep 2018 07:22:48 GMT
+Content-Type: application/json; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: PHP/5.5.31
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+Pragma: no-cache
+</pre></td></tr><tr><td class="data key">Response Data</td><td class="data delimiter">:</td><td class="data"><pre class="data">{"status":1,"data":{"rs":0,"msg":"\u8bf7\u767b\u5f55"},"referer":"","state":"success"}</pre></td></tr><tr><td class="data key">Response File</td><td class="data delimiter">:</td><td class="data"><pre class="data"></pre></td></tr></table></div><div class="trail"></div></div></li><li onclick="return onclick_li(this);"><div class="failure"></div><div class="detail"><div class="group">Sampler</div><div class="zebra"><table><tr><td class="data key">Thread Name</td><td class="data delimiter">:</td><td class="data">Thread Group 1-1</td></tr><tr><td class="data key">Timestamp</td><td class="data delimiter">:</td><td class="data"><span class="patch_timestamp">0</span></td></tr><tr><td class="data key">Time</td><td class="data delimiter">:</td><td class="data">0 ms</td></tr><tr><td class="data key">Latency</td><td class="data delimiter">:</td><td class="data">0 ms</td></tr><tr><td class="data key">Bytes</td><td class="data delimiter">:</td><td class="data">705</td></tr><tr><td class="data key">Sample Count</td><td class="data delimiter">:</td><td class="data">1</td></tr><tr><td class="data key">Error Count</td><td class="data delimiter">:</td><td class="data">1</td></tr><tr><td class="data key">Response Code</td><td class="data delimiter">:</td><td class="data">Non HTTP response code: java.net.MalformedURLException</td></tr><tr><td class="data key">Response Message</td><td class="data delimiter">:</td><td class="data">Non HTTP response message: unknown protocol: https1</td></tr></table></div><div class="trail"></div><div class="group">Request</div><div class="zebra"><table><tr><td class="data key">Method/Url</td><td class="data delimiter">:</td><td class="data"><pre class="data"> </pre></td></tr><tr><td class="data key">Query String</td><td class="data delimiter">:</td><td class="data"><pre class="data"></pre></td></tr><tr><td class="data key">Cookies</td><td class="data delimiter">:</td><td class="data"><pre class="data"></pre></td></tr><tr><td class="data key">Request Headers</td><td class="data delimiter">:</td><td class="data"><pre class="data"></pre></td></tr></table></div><div class="trail"></div><div class="group">Response</div><div class="zebra"><table><tr><td class="data key">Response Headers</td><td class="data delimiter">:</td><td class="data"><pre class="data"></pre></td></tr><tr><td class="data key">Response Data</td><td class="data delimiter">:</td><td class="data"><pre class="data">java.net.MalformedURLException: unknown protocol: https1&#13;
+	at java.net.URL.&lt;init&gt;(URL.java:421)&#13;
+	at java.net.URL.&lt;init&gt;(URL.java:310)&#13;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.getUrl(HTTPSamplerBase.java:1008)&#13;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1189)&#13;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1178)&#13;
+	at org.apache.jmeter.threads.JMeterThread.executeSamplePackage(JMeterThread.java:490)&#13;
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:416)&#13;
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:250)&#13;
+	at java.lang.Thread.run(Thread.java:748)&#13;
+</pre></td></tr><tr><td class="data key">Response File</td><td class="data delimiter">:</td><td class="data"><pre class="data"></pre></td></tr></table></div><div class="trail"></div></div></li><li onclick="return onclick_li(this);"><div class="failure"></div><div class="detail"><div class="group">Sampler</div><div class="zebra"><table><tr><td class="data key">Thread Name</td><td class="data delimiter">:</td><td class="data">Thread Group 1-1</td></tr><tr><td class="data key">Timestamp</td><td class="data delimiter">:</td><td class="data"><span class="patch_timestamp">0</span></td></tr><tr><td class="data key">Time</td><td class="data delimiter">:</td><td class="data">0 ms</td></tr><tr><td class="data key">Latency</td><td class="data delimiter">:</td><td class="data">0 ms</td></tr><tr><td class="data key">Bytes</td><td class="data delimiter">:</td><td class="data">743</td></tr><tr><td class="data key">Sample Count</td><td class="data delimiter">:</td><td class="data">1</td></tr><tr><td class="data key">Error Count</td><td class="data delimiter">:</td><td class="data">1</td></tr><tr><td class="data key">Response Code</td><td class="data delimiter">:</td><td class="data">Non HTTP response code: java.net.MalformedURLException</td></tr><tr><td class="data key">Response Message</td><td class="data delimiter">:</td><td class="data">Non HTTP response message: unknown protocol: http1</td></tr></table></div><div class="trail"></div><div class="group">Request</div><div class="zebra"><table><tr><td class="data key">Method/Url</td><td class="data delimiter">:</td><td class="data"><pre class="data"> </pre></td></tr><tr><td class="data key">Query String</td><td class="data delimiter">:</td><td class="data"><pre class="data"></pre></td></tr><tr><td class="data key">Cookies</td><td class="data delimiter">:</td><td class="data"><pre class="data"></pre></td></tr><tr><td class="data key">Request Headers</td><td class="data delimiter">:</td><td class="data"><pre class="data"></pre></td></tr></table></div><div class="trail"></div><div class="group">Response</div><div class="zebra"><table><tr><td class="data key">Response Headers</td><td class="data delimiter">:</td><td class="data"><pre class="data"></pre></td></tr><tr><td class="data key">Response Data</td><td class="data delimiter">:</td><td class="data"><pre class="data">java.net.MalformedURLException: unknown protocol: http1&#13;
+	at java.net.URL.&lt;init&gt;(URL.java:421)&#13;
+	at java.net.URL.&lt;init&gt;(URL.java:310)&#13;
+	at java.net.URL.&lt;init&gt;(URL.java:333)&#13;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.getUrl(HTTPSamplerBase.java:1006)&#13;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1189)&#13;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1178)&#13;
+	at org.apache.jmeter.threads.JMeterThread.executeSamplePackage(JMeterThread.java:490)&#13;
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:416)&#13;
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:250)&#13;
+	at java.lang.Thread.run(Thread.java:748)&#13;
+</pre></td></tr><tr><td class="data key">Response File</td><td class="data delimiter">:</td><td class="data"><pre class="data"></pre></td></tr></table></div><div class="trail"></div></div></li></ol></div><div id="right-panel"></div></body></html>
